@@ -13,5 +13,4 @@
 [Tampermonkey (GitHub)](https://raw.githubusercontent.com/p-toy-factory/ends-with-miao/main/packages/userscript/dist/index.user.js)
 
 ## 栗子
-
-![example](https://github.com/PinkChampagne17/ends-with-miao/assets/45930107/0abd06d6-b5ba-4dd0-acd0-d4b1ca5ad440)
+![example](https://github.com/p-toy-factory/ends-with-miao/assets/45930107/57c2e7c0-fb63-416a-adea-5200ab80cca4)
