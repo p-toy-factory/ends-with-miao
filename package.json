@@ -1,0 +1,9 @@
+{
+  "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build:userscript": "pnpm run -r build"
+  }
+}
