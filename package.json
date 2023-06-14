@@ -3,7 +3,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "packageManager": "pnpm@8.6.2",
   "scripts": {
-    "build:userscript": "pnpm run -r build"
+    "build:lib": "pnpm run -C packages/ends-with-miao build",
+    "build:userscript": "pnpm run build:lib && pnpm run -C packages/userscript build",
+    "test": "pnpm run -C packages/ends-with-miao test"
   }
 }
