@@ -1,6 +1,12 @@
 import { endsWithMiao } from "ends-with-miao";
 
 (() => {
+  const isInDevEnv = ["localhost", "127.0.0.1", "0.0.0.0"].includes(
+    location.hostname
+  );
+  if (isInDevEnv) {
+    return;
+  }
   requestIdleCallback(() => {
     const iterator = document.createNodeIterator(
       document.body,
