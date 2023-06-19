@@ -1,4 +1,4 @@
-import { endsWithMiao } from "ends-with-miao"
+import { endsWithMiao } from "ends-with-miao";
 
 (() => {
   requestIdleCallback(() => {
@@ -7,12 +7,16 @@ import { endsWithMiao } from "ends-with-miao"
       NodeFilter.SHOW_TEXT
     );
 
-    for (let currentNode = iterator.nextNode(); Boolean(currentNode); currentNode = iterator.nextNode()) {
-      const { textContent } = currentNode
-      const textContentEndsWithMiao = endsWithMiao(currentNode.textContent)
+    for (
+      let currentNode = iterator.nextNode();
+      Boolean(currentNode);
+      currentNode = iterator.nextNode()
+    ) {
+      const { textContent } = currentNode;
+      const textContentEndsWithMiao = endsWithMiao(currentNode.textContent);
       if (textContent !== textContentEndsWithMiao) {
-        currentNode.textContent = textContentEndsWithMiao
+        currentNode.textContent = textContentEndsWithMiao;
       }
     }
-  })
-})()
+  });
+})();
