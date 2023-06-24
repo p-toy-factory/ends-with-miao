@@ -7,7 +7,7 @@ import { endsWithMiao } from "ends-with-miao"
       NodeFilter.SHOW_TEXT
     );
 
-    for (let currentNode = iterator.nextNode(); Boolean(currentNode); currentNode = iterator.nextNode()) {
+    for (let currentNode = iterator.nextNode(); currentNode; currentNode = iterator.nextNode()) {
       const { textContent } = currentNode
       const textContentEndsWithMiao = endsWithMiao(currentNode.textContent)
       if (textContent !== textContentEndsWithMiao) {
