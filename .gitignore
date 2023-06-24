@@ -1,2 +1,3 @@
-packages/ends-with-miao/dist
 node_modules
+.eslintcache
+packages/ends-with-miao/dist

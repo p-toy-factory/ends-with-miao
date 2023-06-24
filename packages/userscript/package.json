@@ -14,12 +14,16 @@
   },
   "homepage": "https://github.com/p-toy-factory/ends-with-miao#readme",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "lint": "env ESLINT_USE_FLAT_CONFIG=true eslint . -c eslint.config.mjs --cache",
+    "lint:fix": "pnpm run lint --fix"
   },
   "dependencies": {
-    "ends-with-miao": "workspace:1.x"
+    "ends-with-miao": "workspace:1.x",
+    "eslint-config-ewm": "workspace:^"
   },
   "devDependencies": {
+    "eslint": "^8.43.0",
     "webpack": "^5.81.0",
     "webpack-cli": "^5.0.2"
   }
