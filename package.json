@@ -10,5 +10,8 @@
     "lint": "pnpm run -C packages/userscript lint",
     "lint:fix": "pnpm run -C packages/userscript lint:fix",
     "test": "pnpm run -C packages/ends-with-miao test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
   }
 }
