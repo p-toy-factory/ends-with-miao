@@ -5,10 +5,13 @@
   ],
   "packageManager": "pnpm@8.6.2",
   "scripts": {
-    "build:lib": "pnpm run -C packages/ends-with-miao build",
-    "build:userscript": "pnpm run build:lib && pnpm run -C packages/userscript build",
-    "lint": "pnpm run -C packages/userscript lint",
-    "lint:fix": "pnpm run -C packages/userscript lint:fix",
-    "test": "pnpm run -C packages/ends-with-miao test"
+    "build": "lerna run build",
+    "check": "lerna run lint,test",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "test": "lerna run test"
+  },
+  "devDependencies": {
+    "lerna": "^7.1.4"
   }
 }
