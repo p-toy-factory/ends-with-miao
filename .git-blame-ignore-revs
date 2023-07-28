@@ -1,0 +1,6 @@
+# Enable via `git config blame.ignoreRevsFile .git-blame-ignore-revs`
+# DO NOT ENABLE THIS CONFIG GLOBALLY
+# OTHERWISE git-blame WILL CRASH IN ANY REPOSITORY WITHOUT SUCH A FILE
+
+# prettier config changes
+60f36c558e402015f56f5d448253af506510a9f3
