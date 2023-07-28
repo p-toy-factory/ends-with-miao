@@ -1,21 +1,17 @@
 {
-    "include": [
-        "src",
-    ],
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "allowUmdGlobalAccess": true,
-        "allowUnusedLabels": false,
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitOverride": true,
-        "outDir": "./dist",
-        "sourceMap": true,
-        "strict": true,
-        "target": "ESNext",
-        "types": [
-            "@types/jest"
-        ]
-    },
+	"include": ["src"],
+	"compilerOptions": {
+		"allowSyntheticDefaultImports": true,
+		"allowUmdGlobalAccess": true,
+		"allowUnusedLabels": false,
+		"module": "ESNext",
+		"moduleResolution": "node",
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"outDir": "./dist",
+		"sourceMap": true,
+		"strict": true,
+		"target": "ESNext",
+		"types": ["@types/jest"]
+	}
 }

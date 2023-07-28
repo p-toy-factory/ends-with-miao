@@ -1,15 +1,15 @@
 {
-  "name": "eslint-config-ewm",
-  "version": "1.0.0",
-  "description": "",
-  "author": "pinkchampagne",
-  "private": true,
-  "main": "index.js",
-  "devDependencies": {
-    "@eslint/js": "^8.43.0",
-    "globals": "^13.20.0"
-  },
-  "peerDependencies": {
-    "eslint": ">= 8"
-  }
+	"name": "eslint-config-ewm",
+	"version": "1.0.0",
+	"description": "",
+	"author": "pinkchampagne",
+	"private": true,
+	"main": "index.js",
+	"devDependencies": {
+		"@eslint/js": "^8.43.0",
+		"globals": "^13.20.0"
+	},
+	"peerDependencies": {
+		"eslint": ">= 8"
+	}
 }
