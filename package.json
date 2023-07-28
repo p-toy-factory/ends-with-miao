@@ -1,17 +1,18 @@
 {
-  "private": "true",
-  "workspaces": [
-    "packages/*"
-  ],
-  "packageManager": "pnpm@8.6.2",
-  "scripts": {
-    "build": "lerna run build",
-    "check": "lerna run lint,test",
-    "lint": "lerna run lint",
-    "lint:fix": "lerna run lint:fix",
-    "test": "lerna run test"
-  },
-  "devDependencies": {
-    "lerna": "^7.1.4"
-  }
+	"private": "true",
+	"workspaces": [
+		"packages/*"
+	],
+	"packageManager": "pnpm@8.6.2",
+	"scripts": {
+		"build": "lerna run build",
+		"check": "prettier . --check && lerna run lint,test",
+		"lint": "prettier . --check && lerna run lint",
+		"lint:fix": "prettier . --write && lerna run lint:fix",
+		"test": "lerna run test"
+	},
+	"devDependencies": {
+		"lerna": "^7.1.4",
+		"prettier": "^3.0.0"
+	}
 }
