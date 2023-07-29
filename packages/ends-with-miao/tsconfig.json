@@ -1,17 +1,19 @@
 {
-	"include": ["src"],
+	"include": [
+		"src"
+	],
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
 		"allowUmdGlobalAccess": true,
-		"allowUnusedLabels": false,
+		"declaration": true,
 		"module": "ESNext",
 		"moduleResolution": "node",
 		"noFallthroughCasesInSwitch": true,
 		"noImplicitOverride": true,
 		"outDir": "./dist",
-		"sourceMap": true,
 		"strict": true,
 		"target": "ESNext",
-		"types": ["@types/jest"]
+		"types": [
+			"@types/jest"
+		]
 	}
 }
