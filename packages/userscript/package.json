@@ -24,6 +24,7 @@
 	},
 	"devDependencies": {
 		"eslint": "^8.43.0",
+		"terser-webpack-plugin": "^5.3.9",
 		"webpack": "^5.81.0",
 		"webpack-cli": "^5.0.2"
 	}
