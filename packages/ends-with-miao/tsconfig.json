@@ -1,15 +1,8 @@
 {
+	"extends": "tsconfig",
 	"include": ["src"],
 	"compilerOptions": {
-		"allowUmdGlobalAccess": true,
-		"declaration": true,
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"noFallthroughCasesInSwitch": true,
-		"noImplicitOverride": true,
-		"outDir": "./dist",
-		"strict": true,
-		"target": "ESNext",
+		"outDir": "dist",
 		"types": ["@types/jest"]
 	}
 }
