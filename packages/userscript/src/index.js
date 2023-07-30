@@ -13,7 +13,7 @@ import { endsWithMiao } from "ends-with-miao";
 			currentNode = iterator.nextNode()
 		) {
 			const { textContent } = currentNode;
-			const textContentEndsWithMiao = endsWithMiao(currentNode.textContent);
+			const textContentEndsWithMiao = endsWithMiao(textContent);
 			if (textContent !== textContentEndsWithMiao) {
 				currentNode.textContent = textContentEndsWithMiao;
 			}
