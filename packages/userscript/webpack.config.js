@@ -14,7 +14,7 @@ const banner = [
 	`// @description  ${packageJson.description}`,
 	`// @downloadURL  ${downloadUrl}`,
 	`// @updateURL    ${updateUrl}`,
-	"// @grant        none",
+	"// @grant        GM_registerMenuCommand",
 	`// @homepage     ${packageJson.homepage}`,
 	`// @license      ${packageJson.license}`,
 	"// @match        *://*/*",
@@ -34,7 +34,7 @@ module.exports = {
 				terserOptions: {
 					format: {
 						beautify: true,
-						comments: /==\/?UserScript==|^[ ]?@/,
+						comments: /==\/?UserScript==|^[ ]?@(?!ts-)/,
 						indent_level: 2,
 					},
 					mangle: false,
