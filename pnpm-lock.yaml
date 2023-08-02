@@ -75,13 +75,13 @@ importers:
       ends-with-miao:
         specifier: workspace:1.x
         version: link:../ends-with-miao
-      eslint-config-ewm:
-        specifier: workspace:^
-        version: link:../eslint-config-ewm
     devDependencies:
       eslint:
         specifier: ^8.43.0
         version: 8.43.0
+      eslint-config-ewm:
+        specifier: workspace:^
+        version: link:../eslint-config-ewm
       terser-webpack-plugin:
         specifier: ^5.3.9
         version: 5.3.9(webpack@5.81.0)
