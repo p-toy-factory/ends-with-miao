@@ -14,16 +14,27 @@
 // @version      0.2.0
 // ==/UserScript==
 (() => {
-  "use strict";
-  function miao() {
-    const iterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT);
-    for (let currentNode = iterator.nextNode(); currentNode; currentNode = iterator.nextNode()) {
-      const {textContent} = currentNode, textContentEndsWithMiao = function(input) {
-        return /\p{sc=Hira}|\p{sc=Kana}/gu.test(input);
-      }(input = textContent) ? input : input.replace(/(?:(?!喵)(\p{sc=Han}))([！。…!.])/gu, "$1喵$2");
-      textContent !== textContentEndsWithMiao && (currentNode.textContent = textContentEndsWithMiao);
-    }
-    var input;
-  }
-  requestIdleCallback(miao), GM_registerMenuCommand("手动触发", miao);
+	"use strict";
+	function miao() {
+		const iterator = document.createNodeIterator(
+			document.body,
+			NodeFilter.SHOW_TEXT,
+		);
+		for (
+			let currentNode = iterator.nextNode();
+			currentNode;
+			currentNode = iterator.nextNode()
+		) {
+			const { textContent } = currentNode,
+				textContentEndsWithMiao = (function (input) {
+					return /\p{sc=Hira}|\p{sc=Kana}/gu.test(input);
+				})((input = textContent))
+					? input
+					: input.replace(/(?:(?!喵)(\p{sc=Han}))([！。…!.])/gu, "$1喵$2");
+			textContent !== textContentEndsWithMiao &&
+				(currentNode.textContent = textContentEndsWithMiao);
+		}
+		var input;
+	}
+	requestIdleCallback(miao), GM_registerMenuCommand("手动触发", miao);
 })();

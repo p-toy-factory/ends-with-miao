@@ -1,9 +1,4 @@
 {
-	"extends": "tsconfig",
-	"include": ["src"],
-	"compilerOptions": {
-		"declarationMap": true,
-		"outDir": "dist",
-		"types": ["@types/jest"]
-	}
+  "extends": "@pinkchampagne/tsconfig",
+  "include": ["src", "test"]
 }

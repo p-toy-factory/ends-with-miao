@@ -1,7 +1,17 @@
 {
-	"eslint.experimental.useFlatConfig": true,
-	"eslint.options": {
-		"overrideConfigFile": "eslint.config.mjs"
-	},
-	"eslint.workingDirectories": [{ "mode": "auto" }]
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "cSpell.words": ["autofix", "greasemonkey", "miao", "pinkchampagne"],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ]
 }

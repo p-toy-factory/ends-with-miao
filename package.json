@@ -1,18 +1,26 @@
 {
-	"private": "true",
-	"workspaces": [
-		"packages/*"
-	],
-	"packageManager": "pnpm@8.6.2",
-	"scripts": {
-		"build": "lerna run build",
-		"check": "prettier . --check && lerna run lint,test",
-		"lint": "prettier . --check && lerna run lint",
-		"lint:fix": "prettier . --write && lerna run lint:fix",
-		"test": "lerna run test"
-	},
-	"devDependencies": {
-		"lerna": "^7.1.4",
-		"prettier": "^3.0.0"
-	}
+  "type": "module",
+  "private": "true",
+  "workspaces": ["packages/*"],
+  "packageManager": "pnpm@9.4.0",
+  "scripts": {
+    "build": "nx run-many -t build",
+    "format": "biome format . && nx run-many -t format",
+    "format:fix": "biome format . --write && nx run-many -t format:fix",
+    "lint": "eslint . && nx run-many -t lint",
+    "lint:fix": "eslint . --fix && nx run-many -t lint:fix",
+    "test": "nx run-many -t test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.3",
+    "biome-config": "workspace:*",
+    "eslint": "^9.6.0",
+    "eslint-config-pcp": "2.0.0-beta.6",
+    "nx": "19.3.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "is-core-module": "npm:@nolyfill/is-core-module@^1"
+    }
+  }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "biome-config",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "exports": {
+    "./package.json": "./package.json",
+    "./biome": "./biome.json"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": "^1.8.3"
+  }
+}

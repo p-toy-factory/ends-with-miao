@@ -1,7 +1,7 @@
-const packageJson = require("./package.json");
-const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
-const webpack = require("webpack");
+import packageJson from "./package.json" with { type: "json" };
+import path from "node:path";
+import TerserPlugin from "terser-webpack-plugin";
+import webpack from "webpack";
 
 const downloadUrl =
 	"https://raw.githubusercontent.com/p-toy-factory/ends-with-miao/main/packages/userscript/dist/index.user.js";
@@ -24,7 +24,7 @@ const banner = [
 	"// ==/UserScript==",
 ].join("\n");
 
-module.exports = {
+export default {
 	mode: "production",
 	entry: "./src/index.js",
 	optimization: {
@@ -44,7 +44,7 @@ module.exports = {
 	},
 	output: {
 		filename: "index.user.js",
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve("dist"),
 	},
 	plugins: [
 		new webpack.BannerPlugin({
