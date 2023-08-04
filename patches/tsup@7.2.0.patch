@@ -1,0 +1,34 @@
+diff --git a/dist/index.js b/dist/index.js
+index 68c197cb2b8dfa928a448475b4020e7301da959e..7fb531ba62d33dc5e674b0e652a08b66db5c19f8 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -2184,12 +2184,27 @@ var cjsInterop = () => {
+   };
+ };
+ 
++/**
++ * tree-kill use `taskkill` command on Windows to kill the process,
++ * it may return 128 as exit code when the process has already exited.
++ * @see https://github.com/egoist/tsup/issues/976
++ */
++const isTaskkillCmdProcessNotFoundError = (err) => {
++  return (
++    process.platform === 'win32' &&
++    'cmd' in err &&
++    'code' in err &&
++    typeof err.cmd === 'string' &&
++    err.cmd.startsWith('taskkill') &&
++    err.code === 128
++  )
++}
++
+ // src/index.ts
+ var defineConfig = (options) => options;
+ var killProcess = ({ pid, signal }) => new Promise((resolve, reject) => {
+   _treekill2.default.call(void 0, pid, signal, (err) => {
+-    if (err)
+-      return reject(err);
++    if (err && !isTaskkillCmdProcessNotFoundError(err)) return reject(err)
+     resolve();
+   });
+ });

@@ -1,15 +1,47 @@
 {
-	"name": "eslint-config-ewm",
-	"version": "1.0.0",
-	"description": "",
-	"author": "pinkchampagne",
-	"private": true,
-	"main": "index.js",
-	"devDependencies": {
-		"@eslint/js": "^8.43.0",
-		"globals": "^13.20.0"
-	},
-	"peerDependencies": {
-		"eslint": ">= 8"
-	}
+  "name": "eslint-config-ewm",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "author": "pinkchampagne",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --clean --dts --format=esm,cjs",
+    "dev": "pnpm run build --watch --onSuccess \"pnpm run lint:cache\"",
+    "lint": "env TIMING=1 ESLINT_USE_FLAT_CONFIG=true eslint .",
+    "lint:cache": "pnpm run lint --cache",
+    "lint:editor": "env VSCODE_PID=1 pnpm run lint",
+    "lint:fix": "pnpm run lint --fix"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "1.0.0-beta.21",
+    "@eslint/js": "^8.50.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "ci-info": "^3.9.0",
+    "eslint-config-flat-gitignore": "^0.1.0",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.28.1",
+    "eslint-plugin-no-autofix": "^1.2.3",
+    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "globals": "^13.23.0",
+    "local-pkg": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.2",
+    "eslint": "^8.50.0",
+    "tsconfig": "workspace:*",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  }
 }

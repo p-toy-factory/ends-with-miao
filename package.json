@@ -14,5 +14,13 @@
 	"devDependencies": {
 		"lerna": "^7.1.4",
 		"prettier": "^3.0.0"
+	},
+	"pnpm": {
+		"patchedDependencies": {
+			"tsup@7.2.0": "patches/tsup@7.2.0.patch"
+		},
+		"overrides": {
+			"has": "npm:@nolyfill/has@latest"
+		}
 	}
 }

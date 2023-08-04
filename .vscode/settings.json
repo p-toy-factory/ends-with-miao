@@ -1,7 +1,9 @@
 {
-	"eslint.experimental.useFlatConfig": true,
-	"eslint.options": {
-		"overrideConfigFile": "eslint.config.mjs"
-	},
-	"eslint.workingDirectories": [{ "mode": "auto" }]
+  "cSpell.words": ["autofix", "greasemonkey", "miao", "pinkchampagne"],
+  "eslint.experimental.useFlatConfig": true,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ]
 }
