@@ -10,7 +10,9 @@
 
 你需要先在你的浏览器上安装篡改猴（Tampermonkey），才能安装此脚本喵。
 
-[Install (on GitHub)](https://raw.githubusercontent.com/p-toy-factory/ends-with-miao/main/packages/userscript/dist/index.user.js)
+[Install on GitHub](https://raw.githubusercontent.com/p-toy-factory/ends-with-miao/main/packages/userscript/dist/index.user.js)
+
+[Install on Greasy Fork](https://greasyfork.org/zh-CN/scripts/475350)
 
 ## 栗子
 
