@@ -1,10 +1,11 @@
 {
   "name": "userscript",
   "version": "0.2.0",
-  "description": "将网页中的每一个句子结尾都加上「喵」字作为结尾的篡改猴脚本喵。",
-  "license": "AGPL-3.0",
   "private": "true",
+  "description": "将网页中的每一个句子结尾都加上「喵」字作为结尾的篡改猴脚本喵。",
   "author": "pinkchampagne",
+  "license": "AGPL-3.0",
+  "homepage": "https://github.com/p-toy-factory/ends-with-miao#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/p-toy-factory/ends-with-miao.git"
@@ -12,7 +13,6 @@
   "bugs": {
     "url": "https://github.com/p-toy-factory/ends-with-miao/issues"
   },
-  "homepage": "https://github.com/p-toy-factory/ends-with-miao#readme",
   "scripts": {
     "build": "webpack",
     "lint": "env ESLINT_USE_FLAT_CONFIG=true eslint . --cache",

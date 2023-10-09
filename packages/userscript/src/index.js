@@ -26,5 +26,4 @@ function miao() {
 requestIdleCallback(miao);
 
 // @ts-ignore
-// eslint-disable-next-line no-undef
 GM_registerMenuCommand("手动触发", miao);
