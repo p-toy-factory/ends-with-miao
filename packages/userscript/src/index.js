@@ -1,4 +1,8 @@
 // @ts-check
+
+// eslint-disable-next-line spaced-comment
+/// <reference types="tampermonkey" />
+
 import { endsWithMiao } from "ends-with-miao";
 
 function miao() {
@@ -25,5 +29,4 @@ function miao() {
 
 requestIdleCallback(miao);
 
-// @ts-ignore
 GM_registerMenuCommand("手动触发", miao);
