@@ -19,7 +19,6 @@ const banner = [
 	`// @license      ${packageJson.license}`,
 	"// @match        *://*/*",
 	`// @supportURL   ${packageJson.bugs.url}`,
-	"// @run-at       document-idle",
 	`// @version      ${packageJson.version}`,
 	"// ==/UserScript==",
 ].join("\n");

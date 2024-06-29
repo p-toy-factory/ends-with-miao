@@ -5,28 +5,31 @@
 
 import { endsWithMiao } from "ends-with-miao";
 
-function miao() {
-	const iterator = document.createNodeIterator(
-		document.body,
-		NodeFilter.SHOW_TEXT,
-	);
-
-	for (
-		let currentNode = iterator.nextNode();
-		currentNode;
-		currentNode = iterator.nextNode()
+function miao(
+	iterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT),
+) {
+	const currentNode = iterator.nextNode();
+	if (currentNode === null) {
+		return;
+	}
+	if (
+		!currentNode.parentNode ||
+		!["script", "style", "svg"].includes(
+			currentNode.parentNode.nodeName.toLowerCase(),
+		)
 	) {
 		const { textContent } = currentNode;
-		const textContentEndsWithMiao = endsWithMiao(
-			// @ts-expect-error textContent must be a string
-			textContent,
-		);
-		if (textContent !== textContentEndsWithMiao) {
-			currentNode.textContent = textContentEndsWithMiao;
+		if (textContent) {
+			const textContentEndsWithMiao = endsWithMiao(textContent);
+			if (textContent !== textContentEndsWithMiao) {
+				currentNode.textContent = textContentEndsWithMiao;
+			}
 		}
 	}
+
+	requestIdleCallback(() => miao(iterator));
 }
 
-requestIdleCallback(miao);
+miao();
 
-GM_registerMenuCommand("手动触发", miao);
+GM_registerMenuCommand("手动触发", () => miao());
