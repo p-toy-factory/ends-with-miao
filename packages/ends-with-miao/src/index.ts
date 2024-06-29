@@ -12,5 +12,5 @@ export function endsWithMiao(input: string): string {
 		return input;
 	}
 	// See the comment on the top of the file.
-	return input.replace(/(?:(?!喵)(\p{sc=Han}))([！。…!.])/gu, "$1喵$2");
+	return input.replace(/(?:(?!喵)(\p{sc=Han}))([！。…!])/gu, "$1喵$2");
 }

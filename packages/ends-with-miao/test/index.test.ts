@@ -8,7 +8,11 @@ test("test ends-with-miao", () => {
 	expect(endsWithMiao("你好喵。")).toBe("你好喵。");
 	expect(endsWithMiao("你好！")).toBe("你好喵！");
 	expect(endsWithMiao("你好…")).toBe("你好喵…");
-	expect(endsWithMiao("你好.")).toBe("你好喵.");
+
+	// 不把小数点当作句号，因为它可能是文件名或域名的一部分
+	expect(endsWithMiao("你好.")).toBe("你好.");
+	expect(endsWithMiao("README.中文.md")).toBe("README.中文.md");
+
 	expect(endsWithMiao("你好!")).toBe("你好喵!");
 	expect(endsWithMiao("你好。。。")).toBe("你好喵。。。");
 	expect(endsWithMiao("你好）。")).toBe("你好）。");
